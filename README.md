@@ -1,0 +1,1 @@
+# koolshare_plugin_patch
