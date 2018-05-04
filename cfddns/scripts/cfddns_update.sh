@@ -33,7 +33,7 @@ get_record_response() {
 }
 
 if [ "$?" -eq "0" ]; then
-	cfddns_id=`get_record_response | awk -F"","" '{print $1}' | sed 's/{.*://g'`
+    cfddns_id=`get_record_response | awk -F"","" '{print $1}' | sed 's/{.*://g'`
     current_ip=`get_record_response | awk -F"","" '{print $4}' |grep -oE '([0-9]{1,3}\.?){4}'`
 
     if [ "$ip" = "$current_ip" ]; then
